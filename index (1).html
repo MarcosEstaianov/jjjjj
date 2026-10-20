@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080014">
+    <title>Anime Quest — Sua Aventura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="particles" aria-hidden="true">✦　✧　✦　✧　✦</div>
+
+    <main class="quiz-container">
+        <header>
+            <div class="eyebrow">✦ SUA LENDA COMEÇA AGORA ✦</div>
+            <h1>⚔️ Anime Quest</h1>
+            <p>Suas escolhas vão definir o seu destino!</p>
+        </header>
+
+        <div class="player-stats">
+            <div class="stat">
+                <span>⭐ EXPERIÊNCIA</span>
+                <strong id="xp">0 XP</strong>
+            </div>
+            <div class="stat">
+                <span>🏆 NÍVEL</span>
+                <strong id="level">1</strong>
+            </div>
+            <div class="stat">
+                <span>🧭 JORNADA</span>
+                <strong id="stage">1</strong>
+            </div>
+        </div>
+
+        <section id="quiz">
+            <div class="progress-info">
+                <span id="question-number">Preparando aventura...</span>
+                <span id="progress-label">0%</span>
+            </div>
+
+            <div class="progress">
+                <div id="progress-bar"></div>
+            </div>
+
+            <div id="story-tag">🌌 NOVA AVENTURA</div>
+            <h2 id="question"></h2>
+            <p id="question-description" class="question-description"></p>
+
+            <div id="answers"></div>
+
+            <p id="feedback" class="feedback" aria-live="polite"></p>
+
+            <div class="game-footer">
+                <span>⚡ Cada escolha conta</span>
+                <button id="restart-small" class="secondary-button" type="button">
+                    ↻ Reiniciar
+                </button>
+            </div>
+        </section>
+
+        <section id="result" class="hidden" aria-live="polite">
+            <div class="result-icon" id="result-icon">🏆</div>
+            <div class="eyebrow">SUA JORNADA FOI CONCLUÍDA</div>
+            <h2 id="result-title"></h2>
+            <p id="result-text"></p>
+
+            <div class="result-stats">
+                <div>
+                    <span>Experiência</span>
+                    <strong id="final-xp">0 XP</strong>
+                </div>
+                <div>
+                    <span>Escolhas</span>
+                    <strong id="final-choices">0</strong>
+                </div>
+                <div>
+                    <span>Classe</span>
+                    <strong id="final-class">Aventureiro</strong>
+                </div>
+            </div>
+
+            <div class="ability-panel">
+                <h3>✨ Seu perfil de anime</h3>
+                <p id="result-ability"></p>
+                <p id="result-history" class="history"></p>
+            </div>
+
+            <button id="play-again" class="primary-button" type="button">
+                🔥 Jogar novamente
+            </button>
+        </section>
+
+        <footer class="site-footer">
+            <span>ANIME QUEST</span>
+            <span>Uma aventura criada pelas suas escolhas ✨</span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
